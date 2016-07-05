@@ -1,0 +1,13 @@
+*.aux
+/thesis.bbl
+/thesis.blg
+/thesis.lof
+/thesis.log
+/thesis.lot
+/thesis.out
+/thesis.toc
+/mthesis.pdf
+/approvalpage.log
+/approvalpage.pdf
+/chatter.txt
+/intro/processed.tex

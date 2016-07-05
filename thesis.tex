@@ -1,0 +1,92 @@
+% This sample file is dedicated to the public domain.
+\documentclass[12pt]{myucthesis}
+
+%\nofiles
+% The above command prevents latex from writing its auxiliary
+% files. This is useful if you want to manually tweak them before you
+% generate your final PDF.
+
+
+% Page layout. The fancyhdr package may complain about the need for a
+% larger headheight, depending on how long chapter titles are; if left
+% unspecified in the geometry setup, it defaults to 12pt. The
+% "showframe" option causes the geometry package (version >= 5.0) to
+% show a frame around the margins on every page, which is great for
+% checking that you don't overflow anywhere.
+
+%\usepackage[letterpaper,includehead,margin=1in,headheight=15pt,showframe]{geometry}
+\usepackage[letterpaper,includehead,margin=1in,headheight=15pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\lhead[\fancyplain{\thepage}{\thepage}]{\fancyplain{}{\scshape\rightmark}}
+\rhead[\fancyplain{}{\scshape\leftmark}]{\fancyplain{\thepage}{\thepage}}
+\chead{}
+\cfoot{}
+\lfoot{}
+\rfoot{}
+
+
+% Bibliography stuff:
+
+\newcommand{\newblock}{\par} % need this for some natbib internal bug
+\usepackage{natbib}
+\citestyle{aa}
+\bibliographystyle{yahapj}
+\setlength{\bibsep}{0ex} % single-space entries
+\def\bibpreamble{\addcontentsline{toc}{chapter}{Bibliography}} % get a good TOC entry
+
+
+% Other setup:
+
+\usepackage[T1]{fontenc} % see http://tinyurl.com/67zdxwf
+\usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue,pdfusetitle]{hyperref}
+\usepackage{pdflscape} % allows landscape-oriented figures with PDF page rotation
+\usepackage{aasmacros,amsmath,amssymb,graphicx}
+\usepackage{mydeluxetable} % deluxetable customized to play well with ucthesis
+
+
+\begin{document}
+\ssp % single spacing
+\hypersetup{pageanchor=false}
+\include{setup}
+\maketitle
+\copyrightpage
+
+\begin{abstract}
+My work is awesome. Give me a Ph.D.
+\end{abstract}
+
+\hypersetup{pageanchor=true}
+\begin{frontmatter}
+
+\begin{dedication}
+\null\vfil
+{\large
+\begin{center}
+I dedicate this dissertation to graduate students everywhere.
+\end{center}}
+\null\vfil
+\end{dedication}
+
+\tableofcontents
+\listoffigures % optional
+\listoftables % optional
+
+% If using code.sty, can also add:
+%% \listofcodes
+%% \addcontentsline{toc}{chapter}{List of Code Examples}
+
+\begin{acknowledgements}
+Too bad nobody helped me.
+
+% Feel free to modify or remove this acknowledgment:
+This dissertation was typeset using the
+\href{https://github.com/pkgw/ucastrothesis}{\textsf{ucastrothesis}}
+\LaTeX\ template.
+
+\end{acknowledgements}
+\end{frontmatter}
+
+\include{intro/intro}
+\bibliography{thesis}{}
+\end{document}
