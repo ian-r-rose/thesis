@@ -27,7 +27,7 @@ intro/processed.tex: intro/sample.tex
 # don't keep on trying to reload the file as it's being written and
 # rewritten by pdfLaTeX.
 
-deps += myucthesis.cls uct12.clo aasmacros.sty mydeluxetable.sty \
+deps += myucthesis.cls uct12.clo mymacros.sty mydeluxetable.sty \
   setup.tex thesis.bib yahapj.bst
 cleans += thesis.aux thesis.bbl thesis.blg thesis.lof thesis.log \
   thesis.lot thesis.out thesis.toc mthesis.pdf setup.aux
