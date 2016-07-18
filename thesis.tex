@@ -30,9 +30,9 @@
 
 \newcommand{\newblock}{\par} % need this for some natbib internal bug
 \usepackage{natbib}
-\citestyle{aa}
-\bibliographystyle{yahapj}
-\setlength{\bibsep}{0ex} % single-space entries
+%\citestyle{aa}
+\bibliographystyle{elsarticle-harv}
+%\setlength{\bibsep}{0ex} % single-space entries
 \def\bibpreamble{\addcontentsline{toc}{chapter}{Bibliography}} % get a good TOC entry
 
 
@@ -88,5 +88,9 @@ This dissertation was typeset using the
 \end{frontmatter}
 
 \include{intro/intro}
-\bibliography{thesis}{}
+\include{tpw_rate/tpw_rate_chapter}
+\include{free_surface/free_surface_chapter}
+\include{bayesian_plate_reconstruction/bayesian_plate_reconstruction_chapter}
+
+\bibliography{thesis}
 \end{document}
