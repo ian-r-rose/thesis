@@ -1,9 +1,12 @@
 [submodule "chapter1"]
 	path = tpw_rate
 	url = git@bitbucket.org:irose/tpw_rate.git
+    ignore = dirty
 [submodule "chapter2"]
 	path = free_surface
 	url = git@bitbucket.org:irose/free-surface-paper.git
+    ignore = dirty
 [submodule "bayesian_plate_reconstruction"]
 	path = bayesian_plate_reconstruction
 	url = git@github.com:ian-r-rose/bayesian_plate_reconstruction.git
+    ignore = dirty
