@@ -4,6 +4,11 @@ texargs = -interaction nonstopmode -halt-on-error -file-line-error
 
 default: mthesis.pdf # default target if you just type "make"
 
+.PHONY: push
+push:
+	cd tpw_rate && git push origin thesis_chapter && cd ..
+	cd free_surface && git push origin thesis_chapter && cd .. 
+	cd bayesian_plate_reconstruction && git push origin thesis_chapter && cd ..
 
 # Resources and rules for the introductory chapter. Sample 'make' rule
 # included to show how you can process data as you compile your thesis
