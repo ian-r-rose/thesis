@@ -48,7 +48,7 @@ cleans += tpw_rate/bayesian_plate_reconstruction_chapter.aux \
 bayesian_plate_reconstruction/bayesian_plate_reconstruction_chapter.tex: \
         bayesian_plate_reconstruction/bayesian_plate_reconstruction.tex bayesian_plate_reconstruction/frontmatter.tex
 	make -C bayesian_plate_reconstruction
-	sed -ne 's@{figures/@{bayesian_plate_reconstruction/figures/@; /%%BEGINCLIP/,/%%ENDCLIP/p' $< > bayesian_plate_reconstruction/processed.tex
+	sed -ne 's@{tables/@{bayesian_plate_reconstruction/tables/@; s@{figures/@{bayesian_plate_reconstruction/figures/@; /%%BEGINCLIP/,/%%ENDCLIP/p' $< > bayesian_plate_reconstruction/processed.tex
 	cat bayesian_plate_reconstruction/frontmatter.tex bayesian_plate_reconstruction/processed.tex > $@
 
 
