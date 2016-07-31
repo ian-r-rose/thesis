@@ -56,9 +56,9 @@ bayesian_plate_reconstruction/bayesian_plate_reconstruction_chapter.tex: \
 
 ## Bibliography
 
-deps += free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib
-thesis.bib: free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib
-	bibtool -s -d free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib> $@
+deps += free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib intro/intro.bib
+thesis.bib: free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib intro/intro.bib
+	bibtool -s -d free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib intro/intro.bib> $@
 
 
 
