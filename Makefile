@@ -18,7 +18,7 @@ push:
 deps += intro/intro.tex
 cleans += intro/intro.aux
 
-# Chapter One
+# Chapter Two
 
 deps += tpw_rate/tpw_rate.tex tpw_rate/tpw_rate_chapter.tex
 cleans += tpw_rate/tpw_rate_chapter.aux tpw_rate/tpw_rate_chapter.tex
@@ -28,7 +28,7 @@ tpw_rate/tpw_rate_chapter.tex: tpw_rate/tpw_rate.tex tpw_rate/frontmatter.tex
 	sed -ne 's@{figures/@{tpw_rate/figures/@; /%%BEGINCLIP/,/%%ENDCLIP/p' $< > tpw_rate/processed.tex
 	cat tpw_rate/frontmatter.tex tpw_rate/processed.tex > $@
 
-# Chapter Two
+# Chapter Three
 
 deps += free_surface/free_surface_chapter.tex free_surface/free-surface-paper.tex
 cleans += tpw_rate/free_surface_chapter.aux free_surface/free_surface_chapter.tex
@@ -38,7 +38,7 @@ free_surface/free_surface_chapter.tex: free_surface/free-surface-paper.tex free_
 	sed -ne 's@{figures/@{free_surface/figures/@; /%%BEGINCLIP/,/%%ENDCLIP/p' $< > free_surface/processed.tex
 	cat free_surface/frontmatter.tex free_surface/processed.tex > $@
 
-# Chapter Three
+# Chapter Four
 
 deps += bayesian_plate_reconstruction/bayesian_plate_reconstruction_chapter.tex \
         bayesian_plate_reconstruction/bayesian_plate_reconstruction.tex
@@ -52,7 +52,10 @@ bayesian_plate_reconstruction/bayesian_plate_reconstruction_chapter.tex: \
 	cat bayesian_plate_reconstruction/frontmatter.tex bayesian_plate_reconstruction/processed.tex > $@
 
 
+# Chapter Five
 
+deps += conclusion/conclusion.tex
+cleans += conclusion/conclusion.aux
 
 ## Bibliography
 
