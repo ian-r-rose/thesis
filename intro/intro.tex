@@ -1,10 +1,17 @@
-% This sample file is dedicated to the public domain.
 \chapter{Introduction}
 \label{chap:intro}
 
 \section{Prelude}
 
-Conservation of agular momentum in a rotating reference frame for a torque free planet requires
+Two of the most foundational observations of the Earth system are 
+(1) that the planet is cooling off from a combination of primordial heat and the decay of radioactive elements,
+and (2) that it is rotating.
+The cooling of the planet results in convection in Earth's interior and its surface expression in plate tectonics,
+and is thus responsible for a great deal of the geologic activity that we experience.
+The rotation of the planet is a dominant factor in the fluid dynamics of the oceans, atmosphere, and core.
+In this dissertation we consider the interaction between convection in Earth's mantle and the rotational dynamics of the planet.
+We may relate the two processes through the classical angular momentum equation.
+Conservation of angular momentum in a rotating reference frame for a torque free planet requires
 \begin{equation}
 \frac{\partial \mathbf{H}}{\partial t} + \mitbf{\Omega}\times\mathbf{H} = 0,
 \label{eq:conserve_momentum_rotating}
@@ -20,10 +27,11 @@ term $\partial \mathbf{H} / \partial t$ may be neglected, and the conservation e
 Convection in Earth's mantle, by its very nature, involves the transfer mass of different densities,
 as cold lithosphere sinks into the mantle, and buoyant plumes rise from the core mantle boundary (CMB).
 This transfer of mass changes the density structure of the mantle, thereby changing the moment of inertia.
-Equation~\eqref{eq:constraint} is a strong constraint on $\mitbf{\Omega}$, and if the moment of inertia
+Equation~\eqref{eq:constraint} is a strong constraint on $\mitbf{\Omega}$: if the moment of inertia
 is a function of time, then the spin axis must also be a function of time.
-The change in a planet's spin axis as a response to a changing moment of inertia is known as true polar wander (TPW).
-
+The change in direction of a planet's spin axis as a response to a changing moment of inertia is known as true polar wander (TPW).
+In the following sections we give a brief account of the history of conceptions of TPW,
+as well as an overview of the content of this dissertation.
 
 \section{A short history of true polar wander}
 
@@ -142,7 +150,7 @@ numerical modeling, and the development new techniques for paleomagnetic data an
 
 In Chapter~\ref{chap:tpw_rate} we consider the problem of TPW from the perspective of fluid dynamics.
 Mass redistribution in the convecting mantle of a planet causes perturbations in its moment of inertia tensor. 
-Here we present scaling analyses and numerical simulations of TPW due to mantle convection over a range of parameter space relevant to planetary interiors. 
+We present scaling analyses and numerical simulations of TPW due to mantle convection over a range of parameter space relevant to planetary interiors. 
 For simple rotating convection, the most important parameters are the Rayleigh number, the rotation rate, and the size of relative density fluctuations 
 (i.e. thermal expansivity times the temperature variations). 
 We identify timescales for the growth of moment of inertia perturbations due to convection and for their relaxation due to true polar wander. 
@@ -164,7 +172,7 @@ This instability severely limits stable timestep sizes to those much smaller tha
 in geodynamic simulations without a free surface. 
 Several schemes have been proposed in the literature to deal with these instabilities.
 
-Here we analyze the problem of creeping viscous flow with a free surface and discuss the 
+We analyze the problem of creeping viscous flow with a free surface and discuss the 
 origin of these instabilities. We demonstrate their cause and how existing stabilization 
 schemes work to damp them out.
 We also propose a new scheme for removing instabilities from free surface calculations. 
@@ -184,7 +192,7 @@ Many of the proposed TPW events are derived from paleomagnetic APW paths.
 However, it has proven difficult to interpret APW paths in the presence of large errors,
 age uncertainties, and the lack of paleolongitude control in traditional paleomagnetic analysis.
 Approaches for dealing with the uncertainties in APW paths include spline fits and running means.
-Here we propose a new approach for interpretation of APW paths.
+We propose a new approach for interpretation of APW paths.
 It extends the paleomagnetic Euler pole analysis of \citet{gordon1984paleomagnetic}
 by placing it within the framework of a Bayesian inverse problem.
 This allows the natural incorporation of uncertainties in both pole position and age.
