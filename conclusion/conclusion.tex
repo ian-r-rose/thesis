@@ -1,0 +1,76 @@
+\chapter{Conclusion and outlook}
+\label{chap:conclusion}
+
+The work in this dissertation has approached the topic of true polar wander
+from several directions, including scaling, numerics, and data analysis.
+
+In Chapter~\ref{chap:tpw_rate} we analyzed TPW from the perspective of fluid dynamics.
+The rotating planet is most stable when the spin axis coincides with the axis of the largest moment of inertia.
+TPW is primarily a balance bewteen the generation of anomalies in the moment of inertia tensor
+via convection and their decay via movement of the spin axis.
+Our scaling showed that the primary nondimensional numbers controling TPW are the Rayleigh number $\mathrm{Ra}$,
+and the Froude number $m$, defined by the ratio of centrifugal to gravitational forces.
+
+The Froude number sets the size of the rotational bulge, which acts
+as the brakes on TPW. The dependence on the Rayleigh number is more complicated:
+at high $\mathrm{Ra}$ the flow becomes more chaotic, and the total power in the degree-two
+part of the density field (which is the part that controls TPW) goes down.
+However, at high $\mathrm{Ra}$ the characteristic response time for TPW also goes down,
+and these two effects largely cancel. Additionally, at higher $\mathrm{Ra}$,
+the perturbations to the moment of inertia can produce larger angular differences
+between the axis of the maximum moment of inertia and the spin axis,
+which results in faster rates of TPW. The net effect of higher $\mathrm{Ra}$,
+and the correspondingly more vigorous convection, is that TPW events become more likely.
+
+\citet{gold1955instability}, and later \citet{goldreich1969some}, used a metaphor
+of beetles crawling around on the surface of the globe, thereby shifting the moment
+of inertia and causing TPW. Within this metaphor, our analysis addresses the
+number, speed, and size of the beetles. As the Rayleigh number increases,
+we predict more beetles, which move more quickly, but are smaller.
+
+In Chapter~\ref{chap:free_surface} we analyzed numerical methods for simulating
+viscous flows with a free surface boundary condition. Free surface boundary conditions
+are needed for simulating many tectonic and geomorphologic settings, and
+allow for the computation of gravity and moment of inertia perturbations 
+in models with arbitrary viscosity structures. 
+We explained the so-called ``drunken sailor'' numerical instability that
+has afflicted numerical models with free surfaces in terms of the spectrum of relaxation
+times for the system. This relaxation time spectrum can be found by solving a generalized eigenvalue problem.
+Using this framework, we showed that the commonly used quasi-implicit stabilization
+scheme works by lengthening the relaxation times, allowing for longer timesteps.
+
+Our spectral analysis also allows for the construction of a new timestepping
+scheme that is rooted in nonstandard finite differences. It is first order accurate,
+and allows for much larger timestep sizes than the forward Euler scheme 
+(if the numerical analyst is willing to forgo accuracy in the shortest timescales of the system).
+
+In Chapter~\ref{chap:bayesian_plate_reconstruction} we proposed a new method
+for analyzing paleomagnetic apparent polar wander paths. Commonly used methods
+such as spline fits and running means provide smooth, age progressive APW paths
+from paleomagnetic poles, but it is difficult to know what smoothing parameters
+are appropriate, or how to incorporate uncertainties in age and position of the poles.
+We proposed an extention of the paleomagnetic Euler pole method which uses Bayesian
+Markov chain Monte Carlo methods to address these difficulties.
+This approach naturally allows for the incorporation of uncertainties in the input data,
+and automatically provides uncertainties in the model parameters for which we invert.
+Furthermore, the forward model is rooted in the kinematic model used
+for the description of plate motions, allowing us to estimate past plate speeds
+and their uncertainties.
+
+We applied our Bayesian PEP method to paleomagnetic poles from the 
+Mesoproterozoic Keweenawan Midcontinent Rift zone, which has been interpreted to
+imply extremely fast plate speeds. Our inversions find that the implied plate
+speeds for Laurentia were between 22.9-39.1 cm/yr at a 95\% credible interval.
+These speeds are significantly faster than the highest plate speeds in
+models of Cenozoic plate motions. True polar wander, which has the potential
+to be much faster than plate speeds, is one possible explanation for such high
+rates.
+
+Future models for the inversion of past plate motions could include TPW as an
+explicit model parameter. Since TPW and plate motions are both described by
+finite rotations around Euler poles, it is very difficult to distinguish them,
+and there should be significant tradeoffs between the APW path being explained
+mostly by plate motions and mostly by TPW. 
+There is hope for distinguishing them, however,
+by regularization via the prior distributions,
+and by the inclusion of more continental blocks in the inversion.
