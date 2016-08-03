@@ -21,7 +21,6 @@ the perturbations to the moment of inertia can produce larger angular difference
 between the axis of the maximum moment of inertia and the spin axis,
 which results in faster rates of TPW. The net effect of higher $\mathrm{Ra}$,
 and the correspondingly more vigorous convection, is that TPW events become more likely.
-
 \citet{gold1955instability}, and later \citet{goldreich1969some}, used a metaphor
 of beetles crawling around on the surface of the globe, thereby shifting the moment
 of inertia and causing TPW. Within this metaphor, our analysis addresses the
@@ -39,7 +38,7 @@ times for the system. This relaxation time spectrum can be found by solving a ge
 Using this framework, we showed that the commonly used quasi-implicit stabilization
 scheme works by lengthening the relaxation times, allowing for longer timesteps.
 
-Our spectral analysis also allows for the construction of a new timestepping
+Our spectral analysis also allowed for the construction of a new timestepping
 scheme that is rooted in nonstandard finite differences. It is first order accurate,
 and allows for much larger timestep sizes than the forward Euler scheme 
 (if the numerical analyst is willing to forgo accuracy in the shortest timescales of the system).
@@ -60,17 +59,7 @@ and their uncertainties.
 We applied our Bayesian PEP method to paleomagnetic poles from the 
 Mesoproterozoic Keweenawan Midcontinent Rift zone, which has been interpreted to
 imply extremely fast plate speeds. Our inversions find that the implied plate
-speeds for Laurentia were between 22.9-39.1 cm/yr at a 95\% credible interval.
-These speeds are significantly faster than the highest plate speeds in
+speeds for Laurentia exceeded 22.9 cm/yr at a 95\% credible interval.
+This speed is significantly faster than the highest plate speeds in
 models of Cenozoic plate motions. True polar wander, which has the potential
-to be much faster than plate speeds, is one possible explanation for such high
-rates.
-
-Future models for the inversion of past plate motions could include TPW as an
-explicit model parameter. Since TPW and plate motions are both described by
-finite rotations around Euler poles, it is very difficult to distinguish them,
-and there should be significant tradeoffs between the APW path being explained
-mostly by plate motions and mostly by TPW. 
-There is hope for distinguishing them, however,
-by regularization via the prior distributions,
-and by the inclusion of more continental blocks in the inversion.
+to be much faster than plate speeds, is one possible explanation for such high rates.
