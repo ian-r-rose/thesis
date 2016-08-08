@@ -61,7 +61,7 @@ cleans += conclusion/conclusion.aux
 
 deps += free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib intro/intro.bib
 thesis.bib: free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib intro/intro.bib
-	bibtool -s -d free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib intro/intro.bib> $@
+	bibtool -q -s -d free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_plate_reconstruction/bayesian_plate_reconstruction.bib intro/intro.bib> $@
 
 
 
