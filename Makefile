@@ -2,7 +2,7 @@
 
 texargs = -interaction nonstopmode -halt-on-error -file-line-error
 
-default: mthesis.pdf # default target if you just type "make"
+default: ian_rose_dissertation.pdf # default target if you just type "make"
 
 .PHONY: push
 push:
@@ -72,10 +72,10 @@ thesis.bib: free_surface/free-surface-paper.bib tpw_rate/tpw_rate.bib bayesian_p
 deps += myucthesis.cls uct12.clo mymacros.sty mydeluxetable.sty \
   setup.tex thesis.bib elsarticle-harv.bst
 cleans += thesis.aux thesis.bbl thesis.blg thesis.lof thesis.log \
-  thesis.lot thesis.out thesis.toc mthesis.pdf setup.aux
-toplevels += mthesis.pdf
+  thesis.lot thesis.out thesis.toc ian_rose_dissertation.pdf setup.aux
+toplevels += ian_rose_dissertation.pdf
 
-mthesis.pdf: thesis.tex $(deps)
+ian_rose_dissertation.pdf: thesis.tex $(deps)
 	pdflatex $(texargs) $(basename $<) >chatter.txt
 	bibtex $(basename $<)
 	pdflatex $(texargs) $(basename $<) >chatter.txt
